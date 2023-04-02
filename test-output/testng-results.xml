@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-03T01:13:04 IST" name="Default suite" finished-at="2023-04-03T01:13:24 IST" duration-ms="20097">
+    <groups>
+    </groups>
+    <test started-at="2023-04-03T01:13:04 IST" name="Default test" finished-at="2023-04-03T01:13:24 IST" duration-ms="20097">
+      <class name="functional.dashboard.scripts.Dashboard001_SearchTruck">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:functional.dashboard.scripts.Dashboard001_SearchTruck@175b9425]" started-at="2023-04-03T01:13:04 IST" name="beforeTestMethod" finished-at="2023-04-03T01:13:05 IST" duration-ms="567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:functional.dashboard.scripts.Dashboard001_SearchTruck@175b9425]" started-at="2023-04-03T01:13:05 IST" name="beforeMethodMethod" finished-at="2023-04-03T01:13:22 IST" duration-ms="17352" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void functional.dashboard.scripts.Dashboard001_SearchTruck.searchTruck() throws java.io.IOException,java.lang.InterruptedException,java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodMethod -->
+        <test-method signature="searchTruck()[pri:0, instance:functional.dashboard.scripts.Dashboard001_SearchTruck@175b9425]" started-at="2023-04-03T01:13:22 IST" name="searchTruck" finished-at="2023-04-03T01:13:22 IST" duration-ms="212" status="FAIL">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\Users\user\eclipse-workspace\RobustFramework2\src\main\java\functional\dashboard\data\Dashboard.properties (The system cannot find the path specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\Users\user\eclipse-workspace\RobustFramework2\src\main\java\functional\dashboard\data\Dashboard.properties (The system cannot find the path specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+at java.base/java.io.FileReader.<init>(FileReader.java:60)
+at functional.dashboard.pageobjects.DashboardPageObjects.getpropertyObject(DashboardPageObjects.java:126)
+at functional.dashboard.pageobjects.DashboardPageObjects.getfromcity(DashboardPageObjects.java:140)
+at functional.dashboard.pages.Dashboard.selectFromCity(Dashboard.java:58)
+at functional.dashboard.scripts.Dashboard001_SearchTruck.searchTruck(Dashboard001_SearchTruck.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTruck -->
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:functional.dashboard.scripts.Dashboard001_SearchTruck@175b9425]" started-at="2023-04-03T01:13:22 IST" name="afterMethodMethod" finished-at="2023-04-03T01:13:23 IST" duration-ms="1056" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchTruck status=FAILURE method=Dashboard001_SearchTruck.searchTruck()[pri:0, instance:functional.dashboard.scripts.Dashboard001_SearchTruck@175b9425] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodMethod -->
+        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:functional.dashboard.scripts.Dashboard001_SearchTruck@175b9425]" started-at="2023-04-03T01:13:23 IST" name="afterTestMethod" finished-at="2023-04-03T01:13:24 IST" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+      </class> <!-- functional.dashboard.scripts.Dashboard001_SearchTruck -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
