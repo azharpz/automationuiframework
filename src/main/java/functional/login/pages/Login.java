@@ -58,42 +58,58 @@ public class Login extends LoginPageObjects {
 
 	public void enterLoginDetail() throws IOException, InterruptedException{
 		Thread.sleep(5000);
-	     Entermobilno.sendKeys(getmobileno());
-		 sendotp.click();
-		
-
-			if(sendotp.isDisplayed()){
-				System.out.println("otp page open");
-				log.info("otp page open");
-				Test.info("otp page open");
-				  
-			}
-			else{
-				log.error("otp page not open");
-				Test.fail("otp page not open");
-				
-				
-				  
-			}
-			
+		enteremail.sendKeys(getemail());
+		signin.click();
+	
 			 
-			 Thread.sleep(9000);
-			String username= verifyusername.getText();
-			log.info("Logged in sucessful" +username);
-			Test.pass("Logged in sucessful" +username);
-		 if(username.contains("Hi")){
+			 Thread.sleep(5000);
+			String username= verifytoast.getText();
+			log.info("verified toast message appear as " +username);
+			Test.pass("verified toast message appear as " +username);
+			String email= verifyemail.getText();
+
+		 if(email.contains(getemail())){
 			 Thread.sleep(3000);
 
-				log.info("username displayed ");
-				Test.pass("username displayed ");
+				log.info("email displayed as "+email);
+				Test.pass("email displayed as "+email);
 				
 				  
 			}
 			else{
 				//System.out.println("mobileno not displayed");
-				log.error("username mismatch\"+username");
+				log.error("username mismatch\"+username"+email);
 				
-				Test.fail("username mismatch\"+username");
+				Test.fail("username mismatch\"+username"+email);
+				
+				  
+			}
+	}
+	
+	public void enterPasswordDetail() throws IOException, InterruptedException{
+		Thread.sleep(5000);
+		enterpassword.sendKeys(getemail());
+		signinagain.click();
+	
+			 
+			 Thread.sleep(5000);
+			String username= verifytoast.getText();
+			log.info("verified toast message appear as " +username);
+			Test.pass("verified toast message appear as " +username);
+
+		 if(username.contains(getemail())){
+			 Thread.sleep(3000);
+
+				log.info("logged in sucessfully "+username);
+				Test.pass("logged in sucessfully "+username);
+				
+				  
+			}
+			else{
+				//System.out.println("mobileno not displayed");
+				log.error("not logged in sucessfully"+username);
+				
+				Test.fail("not logged in sucessfully"+username);
 				
 				  
 			}

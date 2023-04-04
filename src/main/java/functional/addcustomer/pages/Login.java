@@ -57,46 +57,6 @@ public class Login extends LoginPageObjects {
 	
 
 	public void enterLoginDetail() throws IOException, InterruptedException{
-		Thread.sleep(5000);
-	     Entermobilno.sendKeys(getmobileno());
-		 sendotp.click();
-		
-
-			if(sendotp.isDisplayed()){
-				System.out.println("otp page open");
-				log.info("otp page open");
-				Test.info("otp page open");
-				  
-			}
-			else{
-				log.error("otp page not open");
-				Test.fail("otp page not open");
-				
-				
-				  
-			}
-			
-			 
-			 Thread.sleep(9000);
-			String username= verifyusername.getText();
-			log.info("Logged in sucessful" +username);
-			Test.pass("Logged in sucessful" +username);
-		 if(username.contains("Hi")){
-			 Thread.sleep(3000);
-
-				log.info("username displayed ");
-				Test.pass("username displayed ");
-				
-				  
-			}
-			else{
-				//System.out.println("mobileno not displayed");
-				log.error("username mismatch\"+username");
-				
-				Test.fail("username mismatch\"+username");
-				
-				  
-			}
 	}
 }
 

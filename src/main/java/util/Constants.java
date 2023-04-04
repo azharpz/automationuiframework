@@ -1,6 +1,6 @@
 package util;
 
 public interface Constants {
-	String url="http://dev.s9trucks.com/";
+	String url="http://3.129.83.61/";
 
 }

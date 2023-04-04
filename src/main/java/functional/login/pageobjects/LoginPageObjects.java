@@ -43,20 +43,29 @@ public abstract class LoginPageObjects extends BaseTest {
 	
 
 	
-	@FindBy(how=How.XPATH,using="//input[@formcontrolname='mobile']") 
+	@FindBy(how=How.XPATH,using="//input[@placeholder='Enter email']") 
 	protected
-	WebElement Entermobilno;
+	WebElement enteremail;
 	
-	@FindBy(how=How.XPATH,using="//button[normalize-space()='Send OTP']") 
+	@FindBy(how=How.XPATH,using="//button[normalize-space()='Sign In']") 
 	protected
-	WebElement sendotp;
+	WebElement signin;
 	
-	@FindBy(how=How.XPATH,using="//a[contains(.,'Hi,')]") 
+	@FindBy(how=How.XPATH,using="//div[@id='toast-container']") 
 	protected
-	WebElement verifyusername;
+	WebElement verifytoast;
 	
+	@FindBy(how=How.XPATH,using="//p[@class='mb-5 fw-bold']") 
+	protected
+	WebElement verifyemail;
 	
+	@FindBy(how=How.XPATH,using="//input[@placeholder='Enter password']") 
+	protected
+	WebElement enterpassword;
 	
+	@FindBy(how=How.XPATH,using="//button[normalize-space()='Sign In']") 
+	protected
+	WebElement signinagain;
 	
 	
 	
@@ -65,7 +74,7 @@ public abstract class LoginPageObjects extends BaseTest {
 	public Properties getpropertyObject() throws IOException
 	{
 		
-	FileReader reader=new FileReader("C:\\Users\\user\\eclipse-workspace\\ui-test-automation\\src\\main\\java\\functional\\login\\data\\Login.properties");  
+	FileReader reader=new FileReader("D:\\ecilipsestaples\\Ecilipse\\ui-automation-framework\\src\\main\\java\\functional\\login\\data\\Login.properties");  
 	      
 	    Properties p=new Properties();  
 	    p.load(reader);  
@@ -77,9 +86,13 @@ public abstract class LoginPageObjects extends BaseTest {
 
 
 
-	public  String getmobileno() throws IOException
+	public  String getemail() throws IOException
 	{
-		return getpropertyObject().getProperty("MobileNumber");
+		return getpropertyObject().getProperty("Email");
+	}
+	public  String getpassword() throws IOException
+	{
+		return getpropertyObject().getProperty("Password");
 	}
 	
 

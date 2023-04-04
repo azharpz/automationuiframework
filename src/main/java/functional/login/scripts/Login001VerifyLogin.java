@@ -26,9 +26,8 @@ public class Login001VerifyLogin extends BaseTest{
 
 
 
-		
-		 dashboard.clickLogin();
 		 login.enterLoginDetail();
+		 login.enterPasswordDetail();
 		
 		 		
     }
